@@ -1,0 +1,3 @@
+/home/gleblarkin/Study/space-hackathon-2026/Problem_2/solution/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+/home/gleblarkin/Study/space-hackathon-2026/Problem_2/solution/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+/home/gleblarkin/Study/space-hackathon-2026/Problem_2/solution/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir
