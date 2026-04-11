@@ -17,7 +17,7 @@ foreach (S IN LISTS SOURCES)
     get_filename_component(name ${S} NAME_WE)
 
     add_executable(${name} ${S})
-    target_link_libraries(${name} PUBLIC turbospace_lib GTest::gtest_main sofa calceph GeographicLib::GeographicLib_SHARED)
+    target_link_libraries(${name} PUBLIC turbospace_lib GTest::gtest_main)
 
     gtest_discover_tests(${name}
             EXTRA_ARGS "--gtest_color=yes"
