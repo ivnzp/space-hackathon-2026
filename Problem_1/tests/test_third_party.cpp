@@ -4,7 +4,7 @@
 #include <iostream>
 
 
-TEST(DormanPrince, DenseOutput) {
+TEST(THIRD, PARTY) {
     const Eigen::VectorXd a{};
 
     const int c = foo(3, 4);
