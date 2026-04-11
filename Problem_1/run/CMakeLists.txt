@@ -10,7 +10,7 @@ FetchContent_MakeAvailable(googletest)
 
 
 include(GoogleTest)
-file(GLOB_RECURSE SOURCES test_*.cpp)
+file(GLOB_RECURSE SOURCES run_*.cpp)
 
 message(${SOURCES})
 

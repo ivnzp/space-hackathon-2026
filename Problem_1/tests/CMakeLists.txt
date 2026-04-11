@@ -21,8 +21,16 @@ foreach (S IN LISTS SOURCES)
 
     message("${name}")
     add_executable(${name} ${S})
-    target_link_libraries(${name} PUBLIC hakaton_lib GTest::gtest_main sofa calceph eigen GeographicLib_SHARED)
+    target_link_libraries(${name} PUBLIC hakaton_lib GTest::gtest_main sofa calceph eigen GeographicLib_SHARED ALGLIB)
     #    target_compile_definitions(${FILE_NAME} PUBLIC TEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/../../data/")
+
+    # Добавляем ALGLIB к тесту
+    target_link_libraries(${name} PUBLIC hakaton_lib ALGLIB)
+
+    # !!! ВАЖНО: Добавляем путь к заголовкам !!!
+    # Путь ${ALGLIB_INCLUDE_DIR} должен быть виден в этой области видимости.
+    # Если нет, можно передать его из главного CMakeLists.txt с помощью PARENT_SCOPE.
+    target_include_directories(${name} PRIVATE ${ALGLIB_INCLUDE_DIR})
 
     gtest_discover_tests(${name}
             EXTRA_ARGS "--gtest_color=yes"
